@@ -19,6 +19,7 @@
 ::after {
   /* box-sizing: border-box; */
 }
+
 /* ----------------------------------------------------------------- */
 
 header {
@@ -101,6 +102,10 @@ body {
   /* display: inline-flex; */
   /* gap: 76px; */
   align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 23px 16px;
 }
 .nav-items {
   display: none;
@@ -113,6 +118,12 @@ body {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hamburger-menu {
+  fill: none;
+  stroke: black;
+  border: none;
+  cursor: pointer;
 }
 .nav-items-active::after {
   content: "";
@@ -133,10 +144,10 @@ body {
 .nav-items:focus {
   color: var(--ocean-color);
 }
-.address-list {
+/* .address-list {
   display: inline-flex;
   gap: 40px;
-}
+} */
 .address {
   display: none;
   color: var(--slate-color);
@@ -183,10 +194,7 @@ body {
   font-size: 36px;
   line-height: 111.111%;
   letter-spacing: 0.72px;
-  /* font-size: 56px; */
-  /* line-height: 107.143%;
-  letter-spacing: 1.12px; */
-  /* padding-bottom: 48px; */
+  padding-bottom: 72px;
 }
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 .order-service-bttn {
@@ -241,7 +249,7 @@ body {
 }
 
 .wawd-section {
-  /* display: flex; */
+  display: flex;
   gap: 24px;
 }
 .wawd-list-item {
@@ -690,6 +698,12 @@ body {
 
 /* ----------------------------------------------------------------- */
 @media screen and (width >= 768px) {
+  .hamburger-menu {
+    display: none;
+  }
+  .hero-section-header {
+    padding-bottom: 36px;
+  }
   .customers-svg-list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -736,7 +750,11 @@ body {
     justify-content: space-between;
   }
   .about-list-item {
-    width: 264px;
+    width: 356px;
+  }
+  .nav-bar {
+    display: flex;
+    gap: 120px;
   }
 }
 @media screen and (width >= 1158px) {
@@ -756,6 +774,9 @@ body {
 
   .paragraph {
     font-weight: 400;
+  }
+  .about-list-item {
+    width: 264px;
   }
   .items-title {
     color: var(--navy-blue-color);
@@ -778,6 +799,7 @@ body {
   }
   .address-list {
     flex-direction: row;
+    gap: 40px;
   }
   .address {
     color: var(--slate-color);
@@ -787,5 +809,11 @@ body {
     font-style: normal;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .wawd-section-container {
+    display: flex;
+  }
+  .nav-bar {
+    gap: 76px;
   }
 }
